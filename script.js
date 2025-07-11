@@ -1,140 +1,324 @@
-// Modal functionality for gallery images
-function openModal(src) {
-  const modal = document.createElement('div');
-  modal.className = 'modal';
-  
-  const modalContent = document.createElement('img');
-  modalContent.src = src;
-  
-  modal.appendChild(modalContent);
-  document.body.appendChild(modal);
-  
-  modal.addEventListener('click', () => {
-    modal.remove();
-  });
-
-  // Add modal styles dynamically
-  const style = document.createElement('style');
-  style.textContent = `
-    .modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.9);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1001;
-      cursor: pointer;
-    }
-    .modal img {
-      max-width: 90%;
-      max-height: 90vh;
-      object-fit: contain;
-    }
-  `;
-  document.head.appendChild(style);
+/* Reset and Base Styles */
+:root {
+  --primary-color: #2c3e50;
+  --accent-color: #e67e22;
+  --text-color: #333;
+  --light-bg: #f5f6fa;
+  --white: #ffffff;
+  --shadow: 0 2px 15px rgba(0,0,0,0.1);
 }
 
-// Form submission handling
-document.getElementById('contactForm')?.addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  // Get form values
-  const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value,
-    projectType: document.getElementById('projectType').value,
-    message: document.getElementById('message').value
-  };
-  
-  // Here you would typically send the data to your server
-  console.log('Form submitted:', formData);
-  
-  // Show success message
-  alert('Thank you for your interest! We will contact you soon.');
-  
-  // Reset form
-  this.reset();
-});
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
-});
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
 
-// Responsive navigation menu
-const createMobileMenu = () => {
-  const header = document.querySelector('header');
-  const nav = document.querySelector('nav');
-  
-  // Create hamburger button
-  const menuBtn = document.createElement('button');
-  menuBtn.className = 'menu-btn';
-  menuBtn.innerHTML = '☰';
-  
-  // Add styles for mobile menu
-  const style = document.createElement('style');
-  style.textContent = `
-    @media (max-width: 768px) {
-      .menu-btn {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: #2c3e50;
-      }
-      
-      nav {
-        display: none;
-        width: 100%;
-        padding: 1rem 0;
-      }
-      
-      nav.active {
-        display: block;
-      }
-      
-      .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
-    }
-    
-    @media (min-width: 769px) {
-      .menu-btn {
-        display: none;
-      }
-      
-      nav {
-        display: block !important;
-      }
-    }
-  `;
-  document.head.appendChild(style);
-  
-  // Toggle menu
-  menuBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-  
-  // Insert button before nav
-  header.insertBefore(menuBtn, nav);
-};
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-// Initialize mobile menu
-window.addEventListener('DOMContentLoaded', createMobileMenu);
+/* Header Styles */
+header {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  max-width: 200px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-bg.svg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  margin-top: 70px;
+}
+
+.hero-content {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Button Styles */
+.btn {
+  background: var(--accent-color);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: #d35400;
+}
+
+/* Section Styles */
+section {
+  padding: 5rem 0;
+}
+
+h2 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature {
+  text-align: center;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+/* Project Cards */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: var(--light-bg);
+  padding: 1rem;
+}
+
+.project-card h3 {
+  color: var(--primary-color);
+  padding: 1rem;
+  margin: 0;
+}
+
+.project-card p {
+  color: var(--accent-color);
+  padding: 0 1rem;
+}
+
+.project-features {
+  list-style: none;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  margin-top: 1rem;
+}
+
+.project-features li {
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  background: var(--light-bg);
+  padding: 1rem;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.contact form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact input,
+.contact select,
+.contact textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.contact textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact-info {
+  background: var(--light-bg);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.contact-info h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-info h3:first-child {
+  margin-top: 0;
+}
+
+/* Footer */
+footer {
+  background: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .header-flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .feature {
+    padding: 1.5rem;
+  }
+  
+  section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
