@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  
+  <!-- Floor Plan Border -->
+  <rect x="50" y="50" width="700" height="500" fill="none" stroke="#2c3e50" stroke-width="2"/>
+  
+  <!-- Living Room -->
+  <g>
+    <rect x="100" y="100" width="300" height="200" fill="none" stroke="#2c3e50" stroke-width="2"/>
+    <text x="250" y="200" font-family="Arial" font-size="16" fill="#2c3e50" text-anchor="middle">Living Room</text>
+  </g>
+  
+  <!-- Kitchen -->
+  <g>
+    <rect x="400" y="100" width="200" height="150" fill="none" stroke="#2c3e50" stroke-width="2"/>
+    <text x="500" y="175" font-family="Arial" font-size="16" fill="#2c3e50" text-anchor="middle">Kitchen</text>
+  </g>
+  
+  <!-- Master Bedroom -->
+  <g>
+    <rect x="100" y="300" width="250" height="200" fill="none" stroke="#2c3e50" stroke-width="2"/>
+    <text x="225" y="400" font-family="Arial" font-size="16" fill="#2c3e50" text-anchor="middle">Master Bedroom</text>
+  </g>
+  
+  <!-- Bedroom 2 -->
+  <g>
+    <rect x="400" y="300" width="200" height="200" fill="none" stroke="#2c3e50" stroke-width="2"/>
+    <text x="500" y="400" font-family="Arial" font-size="16" fill="#2c3e50" text-anchor="middle">Bedroom 2</text>
+  </g>
+  
+  <!-- Doors -->
+  <g stroke="#2c3e50" stroke-width="2">
+    <path d="M 250,100 A 30,30 0 0 1 280,130" fill="none"/>
+    <path d="M 400,175 A 30,30 0 0 1 430,205" fill="none"/>
+    <path d="M 225,300 A 30,30 0 0 1 255,330" fill="none"/>
+    <path d="M 400,400 A 30,30 0 0 1 430,430" fill="none"/>
+  </g>
+  
+  <!-- Windows -->
+  <g stroke="#2c3e50" stroke-width="2">
+    <line x1="150" y1="100" x2="200" y2="100"/>
+    <line x1="450" y1="100" x2="500" y2="100"/>
+    <line x1="100" y1="350" x2="100" y2="400"/>
+    <line x1="600" y1="350" x2="600" y2="400"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial" font-size="24" fill="#2c3e50" text-anchor="middle">2 BHK Floor Plan</text>
+  
+  <!-- Measurements -->
+  <g font-family="Arial" font-size="12" fill="#666">
+    <text x="250" y="90">30 ft</text>
+    <text x="500" y="90">20 ft</text>
+    <text x="90" y="400">20 ft</text>
+    <text x="610" y="400">20 ft</text>
+  </g>
+</svg>
