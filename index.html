@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhyani Constructions - Premier Residential Builder in Bangalore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-flex">
+      <img src="images/logo.svg" alt="Dhyani Constructions Logo" class="logo" />
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('images/hero-bg.svg');">
+    <div class="hero-content">
+      <h1>Building Dreams in Bangalore</h1>
+      <p>Premium residential construction with unmatched quality and timely delivery</p>
+      <a href="#contact" class="btn">Get Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Dhyani Constructions</h2>
+      <p>With over a decade of excellence in Bangalore's construction industry, Dhyani Constructions specializes in creating premium residential spaces that blend modern architecture with traditional values. Our commitment to quality, transparency, and innovation has made us one of the most trusted names in residential construction.</p>
+      <div class="features-grid">
+        <div class="feature">
+          <h3>Quality Materials</h3>
+          <p>Premium construction materials from trusted suppliers</p>
+        </div>
+        <div class="feature">
+          <h3>Expert Team</h3>
+          <p>Skilled architects, engineers, and craftsmen</p>
+        </div>
+        <div class="feature">
+          <h3>Timely Delivery</h3>
+          <p>On-time project completion with regular updates</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="images/project1.svg" alt="Luxury Villa Project" />
+          <h3>Dhyani Serenity Villas</h3>
+          <p>Whitefield | Premium Villas</p>
+          <ul class="project-features">
+            <li>3000-4500 sq.ft</li>
+            <li>Smart Home Features</li>
+            <li>Private Garden</li>
+          </ul>
+        </div>
+        <div class="project-card">
+          <img src="images/project2.svg" alt="Premium Apartment Project" />
+          <h3>Dhyani Sky Gardens</h3>
+          <p>Electronic City | Luxury Apartments</p>
+          <ul class="project-features">
+            <li>2/3 BHK Options</li>
+            <li>Rooftop Garden</li>
+            <li>Club House</li>
+          </ul>
+        </div>
+        <div class="project-card">
+          <img src="images/project3.svg" alt="Row House Project" />
+          <h3>Dhyani Green Valley</h3>
+          <p>Sarjapur Road | Row Houses</p>
+          <ul class="project-features">
+            <li>Eco-friendly Design</li>
+            <li>Community Park</li>
+            <li>24/7 Security</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2>Project Gallery</h2>
+      <div class="gallery-grid">
+        <img src="images/gallery1.svg" alt="Modern Luxury Apartment" onclick="openModal(this.src)">
+        <img src="images/gallery2.svg" alt="2 BHK Floor Plan" onclick="openModal(this.src)">
+        <img src="images/gallery3.svg" alt="Luxury Villa Design" onclick="openModal(this.src)">
+        <img src="images/gallery4.svg" alt="Modern Living Room Interior" onclick="openModal(this.src)">
+        <img src="images/gallery5.svg" alt="Construction Progress" onclick="openModal(this.src)">
+        <img src="images/gallery6.svg" alt="Landscape Design" onclick="openModal(this.src)">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-wrapper">
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <input type="tel" id="phone" placeholder="Phone Number" required />
+          <select id="projectType" required>
+            <option value="">Select Project Type</option>
+            <option value="villa">Villa Construction</option>
+            <option value="apartment">Apartment Construction</option>
+            <option value="rowhouse">Row House</option>
+            <option value="custom">Custom Home</option>
+          </select>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <h3>Visit Our Office</h3>
+          <p>123 Construction Hub, Whitefield Main Road<br>Bangalore, Karnataka 560066</p>
+          <h3>Contact Details</h3>
+          <p>Phone: +91 80 1234 5678<br>Email: info@dhyaniconstructions.com</p>
+          <h3>Working Hours</h3>
+          <p>Monday - Saturday: 9:00 AM - 6:00 PM<br>Sunday: Closed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Dhyani Constructions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
