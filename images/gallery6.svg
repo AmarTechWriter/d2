@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="grass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#90EE90"/>
+      <stop offset="100%" style="stop-color:#228B22"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4682B4"/>
+      <stop offset="100%" style="stop-color:#87CEEB"/>
+    </linearGradient>
+    <linearGradient id="path" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#DEB887"/>
+      <stop offset="100%" style="stop-color:#D2B48C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main Background -->
+  <rect width="800" height="600" fill="url(#grass)"/>
+
+  <!-- Central Water Feature -->
+  <path d="M 300,250 C 400,200 500,200 600,250 C 500,300 400,300 300,250 Z" fill="url(#water)"/>
+
+  <!-- Walking Paths -->
+  <g fill="url(#path)">
+    <path d="M 100,300 C 200,250 300,250 400,300 C 300,350 200,350 100,300 Z"/>
+    <path d="M 500,300 C 600,250 700,250 750,300 C 700,350 600,350 500,300 Z"/>
+  </g>
+
+  <!-- Trees and Plants -->
+  <g>
+    <!-- Large Trees -->
+    <g transform="translate(150,150)">
+      <rect x="-10" y="40" width="20" height="60" fill="#8B4513"/>
+      <circle r="40" fill="#228B22"/>
+    </g>
+    <g transform="translate(650,150)">
+      <rect x="-10" y="40" width="20" height="60" fill="#8B4513"/>
+      <circle r="40" fill="#228B22"/>
+    </g>
+
+    <!-- Small Trees -->
+    <g transform="translate(250,450)">
+      <rect x="-5" y="20" width="10" height="30" fill="#8B4513"/>
+      <circle r="20" fill="#228B22"/>
+    </g>
+    <g transform="translate(550,450)">
+      <rect x="-5" y="20" width="10" height="30" fill="#8B4513"/>
+      <circle r="20" fill="#228B22"/>
+    </g>
+
+    <!-- Flower Beds -->
+    <g transform="translate(400,100)">
+      <path d="M -50,0 A 50,50 0 0 1 50,0 A 50,50 0 0 1 -50,0" fill="#FF69B4"/>
+    </g>
+    <g transform="translate(400,500)">
+      <path d="M -50,0 A 50,50 0 0 1 50,0 A 50,50 0 0 1 -50,0" fill="#FF69B4"/>
+    </g>
+  </g>
+
+  <!-- Seating Areas -->
+  <g fill="#8B4513">
+    <!-- Benches -->
+    <rect x="100" y="200" width="40" height="10" rx="2"/>
+    <rect x="660" y="200" width="40" height="10" rx="2"/>
+    <rect x="100" y="400" width="40" height="10" rx="2"/>
+    <rect x="660" y="400" width="40" height="10" rx="2"/>
+  </g>
+
+  <!-- Decorative Elements -->
+  <g fill="#D3D3D3">
+    <!-- Stone Features -->
+    <circle cx="200" cy="300" r="5"/>
+    <circle cx="600" cy="300" r="5"/>
+    <circle cx="400" cy="200" r="5"/>
+    <circle cx="400" cy="400" r="5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial" font-size="24" fill="#2c3e50" text-anchor="middle">Landscape Design</text>
+  <text x="400" y="80" font-family="Arial" font-size="16" fill="#2c3e50" text-anchor="middle">Luxury Garden Layout</text>
+</svg>

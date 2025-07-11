@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="floor" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B4513"/>
+      <stop offset="100%" style="stop-color:#DEB887"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5F5F5"/>
+      <stop offset="100%" style="stop-color:#E0E0E0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Room Background -->
+  <rect width="800" height="600" fill="url(#wall)"/>
+  <rect y="400" width="800" height="200" fill="url(#floor)"/>
+
+  <!-- Large Window -->
+  <rect x="50" y="50" width="300" height="300" fill="#87CEEB"/>
+  <g fill="none" stroke="#2c3e50" stroke-width="2">
+    <line x1="200" y1="50" x2="200" y2="350"/>
+    <line x1="50" y1="200" x2="350" y2="200"/>
+  </g>
+
+  <!-- Modern Sofa -->
+  <g transform="translate(400,300)">
+    <rect width="300" height="100" fill="#696969" rx="10"/>
+    <rect y="-50" width="300" height="50" fill="#808080" rx="5"/>
+    <!-- Cushions -->
+    <rect x="30" y="-40" width="60" height="60" fill="#A9A9A9" rx="5"/>
+    <rect x="120" y="-40" width="60" height="60" fill="#A9A9A9" rx="5"/>
+    <rect x="210" y="-40" width="60" height="60" fill="#A9A9A9" rx="5"/>
+  </g>
+
+  <!-- Coffee Table -->
+  <g transform="translate(450,420)">
+    <rect width="200" height="80" fill="#2F4F4F" rx="5"/>
+    <!-- Table Legs -->
+    <rect x="20" y="80" width="10" height="40" fill="#2F4F4F"/>
+    <rect x="170" y="80" width="10" height="40" fill="#2F4F4F"/>
+  </g>
+
+  <!-- Floor Lamp -->
+  <g transform="translate(100,300)">
+    <rect width="5" height="200" fill="#2c3e50"/>
+    <path d="M 0,300 Q 25,250 50,300" fill="none" stroke="#2c3e50" stroke-width="2"/>
+    <circle cx="50" cy="300" r="20" fill="#FFD700"/>
+  </g>
+
+  <!-- Wall Art -->
+  <g transform="translate(500,100)">
+    <rect width="200" height="150" fill="#4682B4" rx="5"/>
+    <circle cx="100" cy="75" r="50" fill="#FFD700"/>
+    <rect x="20" y="-10" width="160" height="10" fill="#2c3e50"/>
+  </g>
+
+  <!-- Plants -->
+  <g transform="translate(700,350)">
+    <rect width="60" height="50" fill="#8B4513" rx="5"/>
+    <path d="M 30,350 Q 0,300 30,250 Q 60,300 30,350" fill="#228B22"/>
+  </g>
+
+  <!-- Text -->
+  <text x="400" y="50" font-family="Arial" font-size="24" fill="#2c3e50" text-anchor="middle">Modern Living Room Interior</text>
+</svg>

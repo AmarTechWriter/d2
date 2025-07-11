@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+  <!-- Company Name -->
+  <text x="120" y="60" font-family="Arial" font-size="32" font-weight="bold" fill="#2c3e50">DHYANI</text>
+  
+  <!-- Building Icon -->
+  <g transform="translate(30, 20)">
+    <!-- Building Base -->
+    <rect x="0" y="20" width="60" height="50" fill="#e67e22"/>
+    
+    <!-- Roof -->
+    <path d="M 0,20 L 30,0 L 60,20 Z" fill="#2c3e50"/>
+    
+    <!-- Windows -->
+    <rect x="10" y="30" width="15" height="15" fill="#2c3e50"/>
+    <rect x="35" y="30" width="15" height="15" fill="#2c3e50"/>
+    
+    <!-- Door -->
+    <rect x="25" y="50" width="10" height="20" fill="#2c3e50"/>
+  </g>
+  
+  <!-- Tagline -->
+  <text x="120" y="80" font-family="Arial" font-size="14" fill="#666">CONSTRUCTIONS</text>
+</svg>
